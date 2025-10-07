@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Global Styles ---------- */
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 100%;
+  color: rgb(0, 0, 0);
+  background-color: oklch(86.9% 0.022 252.894);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Navbar Styling ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f234e; /* Tailwind's blue-600 */
+  color: white;
+  padding: 2.5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #0f234e;
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  background-color: #0f234e;
+  color: white;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 140%;
+  font-weight: 1000;
+  transition: color 0.2s ease;
+  background-color: #0f234e;
+  color: white;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #48ddd1; /* lighter shade */
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* full screen height */
+  /* background-color: #f9fafb; light gray background */
+  text-align: center;
+}
+
+.home-title {
+  font-size: 2.5rem; /* text-4xl equivalent */
+  font-weight: bold;
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 1rem;
+  margin-top: -7rem; /* moves title (and description) upward */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.home-description {
+  font-size: 1.125rem;
+  color: #181b1f; /* gray-700 */
+  max-width: 800px;
+ 
+  line-height: 1.8;
+}
+/* ============================= */
+/*       TEAM PAGE STYLES        */
+/* ============================= */
+
+.team-container {
+  min-height: 100vh;
+  background-color: oklch(86.9% 0.022 252.894);
+  padding: 2rem;
+  text-align: center;
+}
+
+.team-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #24449c; /* blue-700 */
+  margin-bottom: 2rem;
+}
+
+/* ----- Table Styling ----- */
+.employee-table {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color:black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-size: 120%;
+  text-align: center;
+  
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 0.8rem 1rem;  /* reduced from 1.8rem */
+  border-bottom: 1px solid #111112;
+  border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+.employee-table td {
+  min-height: 100px;
+}
+
+.employee-table th {
+  background-color: #18387c; 
+  color: white;
+  text-align: center;
+  font-size: 130%;
+}
+
+.employee-table tr:hover {
+  background-color: #eff6ff; 
+}
+
+.employee-table td {
+  text-align: left;
+  color: #000000;
+   min-height: 30px; /* reduced from 100px */
+}
+
+/* ----- Employee photo ----- */
+.employee-photo {
+  width: 100px;
+  height: 110px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 2px solid #3b82f6;
+}
+
+
+/* ===== Employee Form Styling ===== */
+
+/* Container */
+.form-container {
+  max-width: 700px;
+  height: 500px;
+  background: #fff;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.form-title {
+  text-align: center;
+  font-size: 26px;
+  color: #2563eb;
+  margin-bottom: 25px;
+}
+
+/* Alert Messages */
+.form-alert {
+  padding: 12px 18px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-alert.success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.form-alert.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Form Fields */
+.form-content label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.form-content label span {
+  color: red;
+}
+
+.form-content input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus State */
+.form-content input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+  outline: none;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-submit {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-reset {
+  background-color: #f1f1f1;
+  color: #333;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reset:hover {
+  background-color: #e5e7eb;
+}
