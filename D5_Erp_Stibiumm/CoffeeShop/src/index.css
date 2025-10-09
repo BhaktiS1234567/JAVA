@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --card: #f8fafc;
+  --text: #0f172a;
+}
+
+.dark {
+  --bg: #071026;
+  --card: #0b1220;
+  --text: #e6eef8;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  @apply transition-colors duration-300;
+}
